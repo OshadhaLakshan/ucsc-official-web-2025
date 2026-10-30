@@ -1,0 +1,6 @@
+:HL["/ucsc-official-web-2025/_next/static/media/9d1f8403cba63eb5-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ucsc-official-web-2025/_next/static/css/88578d7e213c491c.css","style"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"ieee-day-2026","s":[]},"h":65632,"c":"$Q3"}]]
+1:[["children",{"s":"blog","h":131136,"c":"$Q2"}]]
+0:{"b":"n3YWB0aceSnfiEVonuB9h","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}

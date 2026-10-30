@@ -1,0 +1,5 @@
+:HL["/ucsc-official-web-2025/_next/static/media/9d1f8403cba63eb5-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ucsc-official-web-2025/_next/static/css/88578d7e213c491c.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"blog","h":64,"c":"$Q2"}]]
+0:{"b":"n3YWB0aceSnfiEVonuB9h","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
