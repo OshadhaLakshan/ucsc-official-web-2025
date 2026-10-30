@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 
 import TransitionLink from "./helpers/TransitionLink";
 import { ieeeURL, navbarLinks } from "@/utils";
@@ -42,14 +42,14 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="fixed w-full hidden md:flex gap-6 items-center justify-between px-8 py-2 backdrop-blur-lg z-20 bg-primary-white">
+      <nav className="fixed w-full hidden xl:flex gap-3 items-center justify-between px-8 py-2 backdrop-blur-lg z-20 bg-primary-white">
         <div className="">
           <TransitionLink href="/">
             <Image src={miniLogo} width={140} height={60} alt="Logo" />
           </TransitionLink>
         </div>
 
-        <div className="flex gap-6 py-2 px-6 items-center justify-center text-primary-blue uppercase font-semibold">
+        <div className="flex gap-3 py-2 px-2 items-center justify-center text-primary-blue uppercase font-semibold">
           {navbarLinks.map(({ name, link }, index) => (
             <TransitionLink
               href={link}
@@ -72,9 +72,9 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="flex md:hidden  w-full fixed top-0 z-20 bg-primary-white">
+      <nav className="flex xl:hidden w-full fixed top-0 z-20 bg-primary-white">
         <div className="py-4 px-3 justify-between  items-center flex w-full">
-          <div>
+          <button type="button" onClick={handleClick} aria-label="Toggle navigation" aria-expanded={isOpened}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -86,13 +86,12 @@ const Navbar = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               className=" text-primary-blue"
-              onClick={handleClick}
             >
               <path d="M4 12h16" />
               <path d="M4 18h16" />
               <path d="M4 6h16" />
             </svg>
-          </div>
+          </button>
 
           <div className="">
             <Image src={miniLogo} width={140} height={60} alt="Logo" />
@@ -101,6 +100,7 @@ const Navbar = () => {
 
         <div
           ref={mobileNav}
+          inert={!isOpened}
           style={{ clipPath: "inset(0 0 100% 0)" }}
           className="fixed top-16 bg-primary-white w-full flex flex-col px-4 py-8"
         >
@@ -140,7 +140,7 @@ const Navbar = () => {
 
           <div onClick={handleClick}>
             <TransitionLink
-              href="#contact"
+              href="#contact-us"
               className="hover:bg-primary-blue/10 px-1 py-1 rounded-sm transition-color duration-200 uppercase text-primary-blue font-semibold text-xl"
             >
               Contact us
@@ -234,3 +234,4 @@ const ContactButton = () => {
     </TransitionLink>
   );
 };
+

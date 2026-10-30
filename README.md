@@ -202,3 +202,23 @@ Chrome 111+, or Firefox 128+; consider browser support when changing the stack.
 
 For branch inquiries, email [ucscieee@gmail.com](mailto:ucscieee@gmail.com) or
 visit [ucscieee.lk](https://ucscieee.lk).
+
+
+## Implementation Notes
+
+- **Design:** `/blog/` and statically generated `/blog/ieee-day-2026/` reuse the shared navigation, footer, Raveo font, blue/white theme, spacing and responsive Tailwind conventions. `BlogCard` and `BlogDate` are reusable. Home-section navigation also works from the new routes.
+- **Performance:** The supplied 11.7 MB portrait is converted to a 1200 x 1600 WebP (about 168 KB). Intrinsic dimensions reserve space; the article keeps the full image, and listing cards use a consistent crop. Static export has no image server. Titles wrap without clamping or horizontal overflow; content remains server-rendered with no new dependencies.
+- **Improvements:** Add accessible category filtering once there are enough articles to make it useful.
+
+### Recruitment source and assumptions
+
+Corrected sample-blog folder (26 October 2026 correction):
+https://drive.google.com/drive/folders/1--IVFh535BClj2PBsIUooMZEXq3znqmB
+
+The provided title and five article paragraphs are preserved in `utils/blog.js`. The sample gives the event date (17 October) but no publication date. Publication is assumed to be 25 October 2026, the source document creation date; replace it if the branch supplies the actual publication date. No backend, CMS or optional bonus feature is needed for this implementation.
+
+### Fork deployment
+
+For this recruitment fork, the workflow sets `NEXT_PUBLIC_BASE_PATH=/ucsc-official-web-2025` and publishes to `gh-pages`. Enable GitHub Pages from that branch and the root folder. `SiteImage` prefixes public images for the project path; imported assets retain their generated paths. The video uses the same prefix. The export script writes `.nojekyll` and does not claim the branch's custom domain. With no environment prefix, the same code runs at a root domain or localhost.
+
+Use Node 24, `npm ci`, `npm run lint`, and `npm run build`. To preview the project-path deployment locally, serve the exported directory under `/ucsc-official-web-2025/`. The original README deployment instructions above describe the upstream custom-domain site; this fork uses the project-path instructions here.

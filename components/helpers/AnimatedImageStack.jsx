@@ -2,7 +2,7 @@
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 
 import { aboutImages } from "@/utils";
 

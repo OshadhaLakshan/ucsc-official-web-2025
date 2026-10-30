@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 import Link from "next/link";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 

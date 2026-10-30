@@ -11,6 +11,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_PATH: /ucsc-official-web-2025
 
     steps:
       - name: Checkout code
@@ -30,7 +32,6 @@ jobs:
       - name: Build (Static Export)
         run: |
           npm run build
-          echo ucscieee.lk > out/CNAME
           touch out/.nojekyll
 
       - name: Deploy to GitHub Pages

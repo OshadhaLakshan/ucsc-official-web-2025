@@ -2,7 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 import { useState } from "react";
 
 import TextReveal from "./TextReveal";

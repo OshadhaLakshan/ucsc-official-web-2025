@@ -50,6 +50,8 @@ const TransitionLink = ({ children, href, className, props }) => {
       if (targetElement) {
         // Scroll to the element instead of reloading
         targetElement.scrollIntoView({ behavior: "smooth" });
+      } else if (pathname !== "/") {
+        router.push(`/${href}`);
       }
     } else {
       // Regular page navigation

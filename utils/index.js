@@ -8,6 +8,7 @@ import about7 from "@/public/images/stack/7.jpg";
 import about8 from "@/public/images/stack/8.jpg";
 
 export const navbarLinks = [
+  { name: "blog", link: "/blog/" },
   {
     name: "home",
     link: "/",

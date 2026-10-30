@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";

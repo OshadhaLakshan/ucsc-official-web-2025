@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 
 import TextScroll from "./helpers/TextScroll";
 import TextVelocityScroll from "./helpers/TextVelocityScroll";

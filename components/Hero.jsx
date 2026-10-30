@@ -1,6 +1,6 @@
 import ParallaxImages from "./helpers/ParallaxImages";
 import TextReveal from "./helpers/TextReveal";
-import Image from "next/image";
+import Image from "@/components/helpers/SiteImage";
 
 const Hero = () => {
   return (
@@ -31,7 +31,7 @@ const Hero = () => {
             preload
             className="absolute top-0 left-0 h-full w-full object-cover brightness-50"
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/hero.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
