@@ -222,3 +222,7 @@ The provided title and five article paragraphs are preserved in `utils/blog.js`.
 For this recruitment fork, the workflow sets `NEXT_PUBLIC_BASE_PATH=/ucsc-official-web-2025` and publishes to `gh-pages`. Enable GitHub Pages from that branch and the root folder. `SiteImage` prefixes public images for the project path; imported assets retain their generated paths. The video uses the same prefix. The export script writes `.nojekyll` and does not claim the branch's custom domain. With no environment prefix, the same code runs at a root domain or localhost.
 
 Use Node 24, `npm ci`, `npm run lint`, and `npm run build`. To preview the project-path deployment locally, serve the exported directory under `/ucsc-official-web-2025/`. The original README deployment instructions above describe the upstream custom-domain site; this fork uses the project-path instructions here.
+
+### Validation
+
+Checked with Node 24: ESLint passes and the static production build exports home, previous officers, blog listing and article routes. Desktop (1280 px) and mobile (390 px) browser checks verified title wrapping, the supplied image, article navigation and the return link. Finance and Program files are separate recruitment submissions and are not part of this public repository.
